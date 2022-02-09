@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 
+  type_p: MyString
   date: MyString
   value: MyString
   document: MyString
@@ -11,7 +11,7 @@ one:
   store_owner: MyString
 
 two:
-  type: 
+  type_p: MyString
   date: MyString
   value: MyString
   document: MyString

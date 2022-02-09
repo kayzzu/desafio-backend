@@ -12,7 +12,7 @@ class PurchasesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create purchase" do
     assert_difference("Purchase.count") do
-      post purchases_url, params: { purchase: { card: @purchase.card, date: @purchase.date, document: @purchase.document, store_name: @purchase.store_name, store_owner: @purchase.store_owner, time: @purchase.time, type: @purchase.type, value: @purchase.value } }, as: :json
+      post purchases_url, params: { purchase: { card: @purchase.card, date: @purchase.date, document: @purchase.document, store_name: @purchase.store_name, store_owner: @purchase.store_owner, time: @purchase.time, type_p: @purchase.type_p, value: @purchase.value } }, as: :json
     end
 
     assert_response :created
@@ -24,7 +24,7 @@ class PurchasesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update purchase" do
-    patch purchase_url(@purchase), params: { purchase: { card: @purchase.card, date: @purchase.date, document: @purchase.document, store_name: @purchase.store_name, store_owner: @purchase.store_owner, time: @purchase.time, type: @purchase.type, value: @purchase.value } }, as: :json
+    patch purchase_url(@purchase), params: { purchase: { card: @purchase.card, date: @purchase.date, document: @purchase.document, store_name: @purchase.store_name, store_owner: @purchase.store_owner, time: @purchase.time, type_p: @purchase.type_p, value: @purchase.value } }, as: :json
     assert_response :success
   end
 
