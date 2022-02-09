@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  date: MyString
+  value: MyString
+  document: MyString
+  card: MyString
+  time: MyString
+  store_name: MyString
+  store_owner: MyString
+
+two:
+  type: 
+  date: MyString
+  value: MyString
+  document: MyString
+  card: MyString
+  time: MyString
+  store_name: MyString
+  store_owner: MyString
