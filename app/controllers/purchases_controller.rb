@@ -15,13 +15,19 @@ class PurchasesController < ApplicationController
 
   # POST /purchases
   def create
-    @purchase = Purchase.new(purchase_params)
+    render json: purchase.errors, status: 422 and return unless params[:purchases]
+    all_created = true
+    purchases = []
+    params[:purchases].each do |purchase_params|
+    purchase = Purchase.create(type_p: purchase_params[:type_p], date: purchase_params[:date], value: purchase_params[:value], document: purchase_params[:document], card:purchase_params[:card], time: purchase_params[:time], store_name: purchase_params[:store_name], store_owner: purchase_params[:store_owner])
+    all_created &&= purchase.valid?
+  end
 
-    if @purchase.save
-      render json: @purchase, status: :created, location: @purchase
-    else
-      render json: @purchase.errors, status: :unprocessable_entity
-    end
+  if all_created
+    render json: purchases, status: 201
+  else
+    render json: purchases.map(&:errors), status: 422
+  end 
   end
 
   # PATCH/PUT /purchases/1
