@@ -24,7 +24,7 @@ class PurchasesController < ApplicationController
   end
 
   if all_created
-    render json: purchases, status: 201
+    render json: purchases.map, status: 201
   else
     render json: purchases.map(&:errors), status: 422
   end 

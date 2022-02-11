@@ -1,24 +1,27 @@
-# README
+### You will need:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby 3.0.0
 
-Things you may want to cover:
+- SQLite3
 
-* Ruby version
+- Bundler 2.3.6
 
-* System dependencies
+### To run this API
 
-* Configuration
+- bundle install
 
-* Database creation
+- rails db:create
 
-* Database initialization
+- rails db:migrate
 
-* How to run the test suite
+- rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+### API documentation
 
-* Deployment instructions
+### POST /purchases
 
-* ...
+### GET /purchases
+
+### DELETE /purchases/<'id'>
+
+### PUT /purchases/<id>
